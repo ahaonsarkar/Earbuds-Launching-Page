@@ -1,0 +1,416 @@
+/* Base Styles */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #000000; /* Pure Black */
+    color: #d1d5db; /* Light gray for general text readability */
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased; /* antialiased */
+    -moz-osx-font-smoothing: grayscale; /* antialiased */
+}
+
+/* Reusable Container and Text Alignment */
+.container {
+    max-width: 80rem; /* Based on Tailwind's max-w-5xl, adjust as needed */
+    margin-left: auto; /* mx-auto */
+    margin-right: auto; /* mx-auto */
+    padding-left: 1rem; /* px-4 */
+    padding-right: 1rem; /* px-4 */
+}
+
+/* Navigation Bar Styling */
+.navbar {
+    background-color: #000000; /* Dark background */
+    color: #ffffff; /* White text for contrast */
+    padding: 1rem 0; /* Padding top/bottom, no left/right */
+    position: sticky; /* Makes it stick to the top when scrolling */
+    top: 0;
+    z-index: 1000; /* Ensures it stays on top of other content */
+    border-bottom: 1px solid rgba(57, 255, 20, 0.2); /* Subtle neon green border at the bottom */
+}
+
+.navbar-content {
+    display: flex; /* Flexbox for alignment */
+    justify-content: space-between; /* Brand on left, links on right */
+    align-items: center; /* Vertically center items */
+}
+
+.navbar-brand {
+    font-size: 1.5rem; /* text-2xl */
+    font-weight: 700; /* font-bold */
+    text-decoration: none; /* No underline */
+    color: #39FF14; /* Neon green for brand name */
+}
+
+.navbar-links {
+    list-style: none; /* Remove bullet points */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Arrange links horizontally */
+    gap: 1.5rem; /* Space between links */
+}
+
+.navbar-link {
+    text-decoration: none; /* No underline */
+    color: #d1d5db; /* Light gray for links */
+    font-weight: 500; /* Medium font weight */
+    transition: color 0.3s ease-in-out; /* Smooth hover effect */
+}
+
+.navbar-link:hover {
+    color: #39FF14; /* Neon green on hover */
+}
+
+.btn-primary-nav {
+    /* Styles for the "Pre-order" button in the nav */
+    display: inline-block;
+    padding: 0.5rem 1rem; /* Smaller padding for nav button */
+    border-radius: 9999px; /* rounded-full */
+    font-weight: 600; /* font-semibold */
+    transition: all 0.3s ease-in-out;
+    background: transparent;
+    color: #39FF14; /* Neon Green text */
+    border: 2px solid #39FF14; /* Neon Green border */
+    box-shadow: 0 2px 10px rgba(57, 255, 20, 0.3); /* Softer neon glow */
+}
+
+.btn-primary-nav:hover {
+    background: linear-gradient(45deg, #00FF00, #39FF14);
+    color: #000000; /* Text turns black on hover */
+    box-shadow: 0 3px 15px rgba(57, 255, 20, 0.7);
+    transform: translateY(-1px);
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Section Backgrounds and Padding */
+.section-padding {
+    padding-top: 4rem; /* py-16 */
+    padding-bottom: 4rem; /* py-16 */
+}
+@media (min-width: 768px) { /* md */
+    .section-padding {
+        padding-top: 6rem; /* md:py-24 */
+        padding-bottom: 6rem; /* md:py-24 */
+    }
+}
+
+.section-bg-black {
+    background-color: #000000; /* bg-black */
+}
+
+.section-bg-gray-950 {
+    background-color: #030712; /* bg-gray-950 */
+}
+
+/* Gradient Background for Hero and CTA */
+.gradient-bg {
+    background: linear-gradient(135deg, #0f1c0f, #070e07); /* Very Dark Forest Green to Dark Forest Green */
+}
+
+/* Primary Button Styling */
+.btn-primary {
+    display: inline-block;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    border-radius: 9999px; /* rounded-full */
+    font-weight: 600; /* font-semibold */
+    transition-property: all;
+    transition-duration: 300ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    background: transparent;
+    color: #39FF14; /* Neon Green text */
+    border: 2px solid #39FF14; /* Neon Green border */
+    box-shadow: 0 4px 20px rgba(57, 255, 20, 0.5); /* Soft neon green glow */
+}
+.btn-primary:hover {
+    background: linear-gradient(45deg, #00FF00, #39FF14);
+    color: #000000; /* Text turns black on hover */
+    box-shadow: 0 6px 25px rgba(57, 255, 20, 0.9);
+    transform: translateY(-2px);
+}
+
+/* Hero Section Specifics */
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding-top: 5rem; /* py-20 */
+    padding-bottom: 5rem; /* py-20 */
+    color: #ffffff; /* text-white */
+}
+@media (min-width: 768px) { /* md */
+    .hero-section {
+        padding-top: 8rem; /* md:py-32 */
+        padding-bottom: 8rem; /* md:py-32 */
+    }
+}
+
+.hero-title {
+    font-size: 2.25rem; /* text-4xl */
+    font-weight: 800; /* font-extrabold */
+    margin-bottom: 1rem; /* mb-4 */
+    line-height: 1.25; /* leading-tight */
+}
+@media (min-width: 768px) { /* md */
+    .hero-title {
+        font-size: 3.75rem; /* md:text-6xl */
+    }
+}
+
+.hero-title .block {
+    display: block;
+    margin-top: 0.5rem; /* mt-2 */
+}
+
+.hero-description {
+    font-size: 1.25rem; /* text-xl */
+    margin-bottom: 2rem; /* mb-8 */
+    opacity: 0.9; /* opacity-90 */
+    max-width: 48rem; /* max-w-3xl */
+    margin-left: auto; /* mx-auto */
+    margin-right: auto; /* mx-auto */
+}
+@media (min-width: 768px) { /* md */
+    .hero-description {
+        font-size: 1.5rem; /* md:text-2xl */
+    }
+}
+
+.hero-button-text {
+    font-size: 1.125rem; /* text-lg */
+}
+@media (min-width: 768px) { /* md */
+    .hero-button-text {
+        font-size: 1.25rem; /* md:text-xl */
+    }
+}
+
+.hero-small-text {
+    margin-top: 1rem; /* mt-4 */
+    font-size: 0.875rem; /* text-sm */
+    opacity: 0.8; /* opacity-80 */
+}
+
+.hero-image-container {
+    margin-top: 3rem; /* mt-12 */
+}
+
+.hero-image {
+    max-width: 100%; /* max-w-full */
+    height: auto; /* h-auto */
+    margin-left: auto; /* mx-auto */
+    margin-right: auto; /* mx-auto */
+    border-radius: 0.5rem; /* rounded-lg */
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); /* shadow-2xl */
+}
+
+/* Product Video Section */
+.video-container {
+    background-color: #000000; /* bg-black */
+    padding: 1.5rem; /* p-6 */
+    border-radius: 0.75rem; /* rounded-xl */
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); /* shadow-2xl */
+    max-width: 56rem; /* max-w-4xl */
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid rgba(57, 255, 20, 0.4); /* Subtler border for the video box */
+    box-shadow: 0 10px 40px rgba(57, 255, 20, 0.2); /* Soft glow for the video box */
+}
+.video-container video {
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem; /* rounded-lg */
+}
+.video-description {
+    margin-top: 2rem; /* mt-8 */
+    font-size: 1.125rem; /* text-lg */
+    color: #9ca3af; /* text-gray-400 */
+    max-width: 42rem; /* max-w-2xl */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Shared Section Title Styles */
+.section-title {
+    font-size: 1.875rem; /* text-3xl */
+    font-weight: 700; /* font-bold */
+    text-align: center;
+    margin-bottom: 3rem; /* mb-12 */
+}
+@media (min-width: 768px) { /* md */
+    .section-title {
+        font-size: 3rem; /* md:text-5xl */
+    }
+}
+
+/* Feature and Testimonial Cards */
+.grid {
+    display: grid;
+    gap: 2rem; /* gap-8 */
+}
+.grid-cols-features {
+    grid-template-columns: repeat(1, minmax(0, 1fr)); /* grid-cols-1 */
+}
+@media (min-width: 768px) { /* md */
+    .grid-cols-features {
+        grid-template-columns: repeat(2, minmax(0, 1fr)); /* md:grid-cols-2 */
+    }
+}
+@media (min-width: 1024px) { /* lg */
+    .grid-cols-features {
+        grid-template-columns: repeat(3, minmax(0, 1fr)); /* lg:grid-cols-3 */
+    }
+}
+
+.grid-cols-testimonials {
+    grid-template-columns: repeat(1, minmax(0, 1fr)); /* grid-cols-1 */
+}
+@media (min-width: 768px) { /* md */
+    .grid-cols-testimonials {
+        grid-template-columns: repeat(2, minmax(0, 1fr)); /* md:grid-cols-2 */
+    }
+}
+
+
+.feature-card,
+.testimonial-card {
+    background-color: #030712; /* bg-gray-950 */
+    padding: 4rem; /* p-16 */
+    border-radius: 0.75rem; /* rounded-xl */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg */
+    transform: scale(1);
+    transition-property: all;
+    transition-duration: 300ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    color: #d1d5db;
+    border: 1px solid rgba(57, 255, 20, 0.6); /* Slightly softer neon green border */
+}
+.feature-card:hover,
+.testimonial-card:hover {
+    transform: scale(1.08); /* hover:scale-108 */
+    border-color: #39FF14; /* Pure neon green border on hover */
+    box-shadow: 0 10px 35px rgba(57, 255, 20, 0.4); /* Slightly stronger shadow */
+}
+
+.feature-card .text-4xl,
+.feature-card .mb-4 {
+    font-size: 2.25rem; /* text-4xl */
+    margin-bottom: 1rem; /* mb-4 */
+}
+.feature-card .text-xl,
+.feature-card .font-semibold,
+.feature-card .mb-2 {
+    font-size: 1.25rem; /* text-xl */
+    font-weight: 600; /* font-semibold */
+    margin-bottom: 0.5rem; /* mb-2 */
+}
+.feature-card .text-gray-300 {
+    color: #d1d5db; /* text-gray-300 */
+}
+
+/* Testimonials Specifics */
+.text-lg { /* For testimonial quote text */
+    font-size: 1.125rem;
+}
+.italic {
+    font-style: italic;
+}
+.mb-4 { /* For testimonial quote text */
+    margin-bottom: 1rem;
+}
+.flex {
+    display: flex;
+}
+.items-center {
+    align-items: center;
+}
+.user-avatar {
+    width: 3rem; /* w-12 */
+    height: 3rem; /* h-12 */
+    border-radius: 9999px; /* rounded-full */
+    margin-right: 1rem; /* mr-4 */
+    object-fit: cover; /* object-cover */
+}
+.font-semibold {
+    font-weight: 600;
+}
+.text-white {
+    color: #ffffff;
+}
+.text-sm {
+    font-size: 0.875rem;
+}
+.text-gray-400 {
+    color: #9ca3af;
+}
+
+
+/* Specific Neon Green Color */
+.text-neon-green {
+    color: #39FF14; /* Pure Neon Green */
+}
+
+/* Specifications Section */
+.specs-box {
+    max-width: 42rem; /* max-w-2xl */
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #000000; /* bg-black */
+    padding: 2.5rem; /* p-10 */
+    border-radius: 0.75rem; /* rounded-xl */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg */
+    border: 1px solid #1f2937; /* border-gray-900 */
+}
+
+.spec-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid #1f2937; /* border-gray-800 */
+}
+.spec-item:last-child {
+    border-bottom: none;
+}
+.spec-label {
+    font-weight: 600;
+    color: #d1d5db;
+}
+.spec-value {
+    color: #39FF14;
+}
+
+/* Footer Styles */
+.footer-bg {
+    background-color: #000000; /* bg-black */
+}
+.footer-padding {
+    padding-top: 2rem; /* py-8 */
+    padding-bottom: 2rem; /* py-8 */
+}
+.footer-content-wrapper {
+    text-align: center;
+    font-size: 0.875rem; /* text-sm */
+    color: #9ca3af; /* text-gray-400 */
+}
+.footer-links-wrapper {
+    margin-top: 0.5rem; /* mt-2 */
+}
+.footer-link {
+    color: #9ca3af; /* text-gray-400 */
+    transition-property: all;
+    transition-duration: 200ms;
+    margin-right: 1rem; /* mr-4 */
+}
+.footer-link:last-child {
+    margin-right: 0;
+}
+.footer-link:hover {
+    color: #39FF14; /* hover:text-neon-green */
+}
