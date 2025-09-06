@@ -1,4 +1,4 @@
-<img width="1911" height="1102" alt="image" src="https://github.com/user-attachments/assets/e39b9c4f-2a33-4142-a878-aaafea43f2d8" /># Earbuds-Launching-Page
+# Earbuds-Launching-Page
 AuraBuds Launching Page is a responsive landing page built with HTML and CSS. It showcases a product launch with sections for features, specs, reviews, and a call-to-action. The project demonstrates front-end design skills and can be reused as a template for product or event launches.
 
 ![image alt](https://github.com/ahaonsarkar/Earbuds-Launching-Page/blob/e45cdc4b04128caef431a0962c49a375f651f048/Screenshot%201.png)
